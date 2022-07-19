@@ -13,13 +13,12 @@ class Table extends TableAqua
     clickTable()
     {
         Cypress.on('uncaught:exception', (err, runnable) => {
-            // returning false here prevents Cypress from
-            // failing the test
+            
             return false
           })
 
           return  cy.get('a.dropdown-item').invoke('show')
-      //  return  cy.contains('Table 1 Example').click({force: true})
+    
           
     }
 
